@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package models;
+
+service Sum {
+  rpc Add (AddRequest) returns (AddResponse) {}
+}
+
+message AddRequest {
+  repeated int32 numbers = 1;
+}
+
+message AddResponse {
+  int32 result = 1;
+}
